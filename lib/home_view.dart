@@ -12,12 +12,12 @@ class Home extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     Expanded(child: Text("Hi Gilang"), flex: 1),
-                    Expanded(child: Text("Search", textAlign: TextAlign.end), flex: 1),
+                    Expanded(child: Icon(Icons.search), flex: 1),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    Expanded(child: Text("Logo Cuaca"), flex: 1),
+                    Expanded(child: Image.asset('assets/images/sun.png'), flex: 1),
                     Expanded(
                         child: Column(
                           children: <Widget>[Text("Kota"), Text("Suhu")],
@@ -42,7 +42,7 @@ class Home extends StatelessWidget {
                         child: Center(
                             child: RaisedButton(
                               color: Colors.lightBlue,
-                              child: Text("Show Button",style: TextStyle(color: Colors.white),),
+                              child: Text("Show Weather",style: TextStyle(color: Colors.white),),
                               onPressed: () {},
                             )))
                   ],

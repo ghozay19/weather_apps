@@ -8,14 +8,14 @@ part of 'weather_api_resp.dart';
 
 WeatherApiResp _$WeatherApiRespFromJson(Map<String, dynamic> json) {
   return WeatherApiResp(
-    list: (json['list'] as List)
+    listCuaca: (json['list'] as List)
         ?.map((e) =>
-            e == null ? null : ApiResponse.fromJson(e as Map<String, dynamic>))
+            e == null ? null : ListWeather.fromJson(e as Map<String, dynamic>))
         ?.toList(),
   );
 }
 
 Map<String, dynamic> _$WeatherApiRespToJson(WeatherApiResp instance) =>
     <String, dynamic>{
-      'list': instance.list,
+      'list': instance.listCuaca,
     };
